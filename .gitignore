@@ -1,0 +1,24 @@
+# Dados locais do usuário
+transacoes.json
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais e variáveis locais
+.venv/
+venv/
+.env
+.env.*
+
+# Ferramentas, testes e editores
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.idea/
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
