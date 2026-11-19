@@ -7,17 +7,16 @@ Projeto desenvolvido para praticar os fundamentos de Python e evoluir gradualmen
 ## Funcionalidades
 
 - Adicionar receitas e despesas com descrição e valor.
-- Validar descrições vazias, valores não numéricos, zero, negativos e valores não finitos.
+- Validar descrições vazias, valores não numéricos, zero e negativos.
 - Aceitar valores digitados com ponto ou vírgula decimal (`25.50` ou `25,50`).
 - Listar transações numeradas.
 - Calcular o total de receitas, despesas e o saldo.
 - Salvar e carregar transações em `transacoes.json`.
-- Identificar arquivos JSON inválidos sem sobrescrevê-los automaticamente.
 
 ## Tecnologias
 
 - Python **3.10 ou superior** (por utilizar `match/case`).
-- Biblioteca padrão do Python: `json`, `math` e `pathlib`.
+- Biblioteca padrão do Python: `json`.
 - Sem dependências externas.
 
 ## Como executar
@@ -65,9 +64,9 @@ Saldo disponível: R$ 2149.50
 
 ```text
 controle-financeiro/
-├── main.py        # Funções e menu interativo
-├── README.md      # Documentação do projeto
-└── .gitignore     # Arquivos que não devem entrar no Git
+├── main.py
+├── README.md
+└── .gitignore
 ```
 
 O arquivo `transacoes.json` é criado automaticamente ao registrar a primeira transação. Ele não é incluído no repositório para evitar a publicação de dados financeiros pessoais.
@@ -91,7 +90,7 @@ Cada transação é representada por um dicionário dentro de uma lista JSON:
 ]
 ```
 
-Se o arquivo estiver inválido ou corrompido, o programa mostra uma mensagem e interrompe o menu para preservar os dados. Faça uma cópia do arquivo antes de tentar corrigi-lo.
+Se o arquivo não existir, o programa começa com uma lista vazia. O tratamento de arquivos JSON inválidos ou corrompidos ainda não foi implementado.
 
 ## Limitações conhecidas e próximos passos
 
@@ -103,6 +102,7 @@ Melhorias planejadas:
 - [ ] Registrar datas e categorias.
 - [ ] Filtrar por período e gerar relatórios.
 - [ ] Adicionar testes automatizados.
+- [ ] Melhorar a validação de dados e o tratamento de erros.
 - [ ] Utilizar `Decimal` para valores monetários.
 - [ ] Avaliar migração do JSON para SQLite.
 
